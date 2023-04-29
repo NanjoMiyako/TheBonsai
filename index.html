@@ -1,3 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The-Bonsai</title>
+  </head>
+  <body>
+ 画像<br>
+ 
+<canvas id="canvas1" width="500" height="500" style="border:1px solid">
+  canvas要素をサポートしていません。
+</canvas>
+<br>
+成長時間:
+<input type="text" id="GrowHourTextBox" value="1">
+時間
+<br>
+<button id="startGrowingBtn" onclick="startGrowing()">成長開始</button>
+<br>
+
+木の色:
+R<input type="text" id="TreeColorRTextBox" value="211" size="3">
+, G<input type="text" id="TreeColorGTextBox" value="211" size="3">
+, B<input type="text" id="TreeColorBTextBox" value="211" size="3">
+<br>
+
+葉の色:
+R<input type="text" id="TreeLeafColorRTextBox" value="0" size="3">
+, G<input type="text" id="TreeLeafColorGTextBox" value="250" size="3">
+, B<input type="text" id="TreeLeafColorBTextBox" value="154" size="3">
+<br>
+
+
+
+<script>
 class Node{
 
 	constructor(stX, stY, enX, enY, length1, angle1, bold1, LeafCount1){
@@ -454,3 +489,8 @@ function DrowTree(RootBr1, RootBr2){
 
 
 
+
+</script>
+
+  </body>
+</html>
