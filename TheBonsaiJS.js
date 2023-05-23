@@ -122,6 +122,60 @@ function InitTreeAttribute(){
 	
 }
 
+function GetTreeAttribute(){
+	R1 = Number(document.getElementById("TreeColorRTextBox").value)
+	G1 = Number(document.getElementById("TreeColorGTextBox").value)
+	B1 = Number(document.getElementById("TreeColorBTextBox").value)
+	MyTreeAttribute.TreeColor = [R1, G1, B1]
+	
+	R2 = Number(document.getElementById("TreeLeafColorRTextBox").value)
+	G2 = Number(document.getElementById("TreeLeafColorGTextBox").value)
+	B2 = Number(document.getElementById("TreeLeafColorBTextBox").value)
+	MyTreeAttribute.TreeLeafColor = [R2, G2, B2]
+	
+	MyTreeAttribute.TreeLeafWidth = 10;
+	MyTreeAttribute.TreeLeafHight = 10;
+	
+	
+	MyTreeAttribute.TreeStemBold = Number(document.getElementById("TreeStemBoldTextbox").value);
+	MyTreeAttribute.TreeStemHight = Number(document.getElementById("TreeStemHightTextbox").value);
+	MyTreeAttribute.TreeStemPos = [ Number(document.getElementById("TreeStemPosXTextbox").value), Number(document.getElementById("TreeStemPosYTextbox").value)];
+	
+	MyTreeAttribute.TreeBrunchDeepLength = Number(document.getElementById("TreeBrunchDeepLengthTextbox").value);
+	
+	MyTreeAttribute.TreeBrunchBrunchingPosMaxPercent = Number(document.getElementById("TreeBrunchBrunchingPosMaxPercentTextbox").value);
+	MyTreeAttribute.TreeBrunchBrunchingPosMinPercent = Number(document.getElementById("TreeBrunchBrunchingPosMinPercentTextbox").value);
+	
+	MyTreeAttribute.TreeBrunchLengthMaxPercent = Number(document.getElementById("TreeBrunchLengthMaxPercentTextbox").value);
+	MyTreeAttribute.TreeBrunchLengthMinPercent = Number(document.getElementById("TreeBrunchLengthMinPercentTextbox").value);
+	
+	MyTreeAttribute.TreeBrunchWidthMaxPercent = Number(document.getElementById("TreeBrunchWidthMaxPercentTextbox").value);
+	MyTreeAttribute.TreeBrunchWidthMinPercent = Number(document.getElementById("TreeBrunchWidthMinPercentTextbox").value);
+	
+	MyTreeAttribute.TreeBrunchMainAngleMax = Number(document.getElementById("TreeBrunchMainAngleMaxTextbox").value);
+	MyTreeAttribute.TreeBrunchMainAngleMin = Number(document.getElementById("TreeBrunchMainAngleMinTextbox").value);
+	
+	MyTreeAttribute.TreeBrunchAngleMax = 180;
+	MyTreeAttribute.TreeBrunchAngleMin = 0;
+	
+	MyTreeAttribute.LeafCountMax = Number(document.getElementById("LeafCountMaxTextbox").value);
+	MyTreeAttribute.LeafCountMin = Number(document.getElementById("LeafCountMinTextbox").value);
+	
+	
+	
+	MyTreeAttribute.TreeRootBrunchList = [];
+	
+
+}
+
+function setDefault(){
+	var form = document.getElementById("TreeColorForm")
+	form.reset();
+
+	var form2 = document.getElementById("TreeAttributeForm")
+	form2.reset();
+}
+
 
 function MakeTreeGrowPlan(){
 
@@ -319,7 +373,8 @@ function startGrowing(){
 	endHour =  Number(document.getElementById("GrowHourTextBox").value);
 	g_CountEnd = 60 * endHour;
 	
-	InitTreeAttribute();
+	//InitTreeAttribute();
+	GetTreeAttribute();
 	MakeTreeGrowPlan();
 	
 	DrowStem();

@@ -18,6 +18,10 @@
 <button id="startGrowingBtn" onclick="startGrowing()">成長開始</button>
 <br>
 
+<hr>
+
+<form id="TreeColorForm">
+
 木の色:
 R<input type="text" id="TreeColorRTextBox" value="211" size="3">
 , G<input type="text" id="TreeColorGTextBox" value="211" size="3">
@@ -29,6 +33,36 @@ R<input type="text" id="TreeLeafColorRTextBox" value="0" size="3">
 , G<input type="text" id="TreeLeafColorGTextBox" value="250" size="3">
 , B<input type="text" id="TreeLeafColorBTextBox" value="154" size="3">
 <br>
+
+</form>
+
+<hr>
+
+<form id="TreeAttributeForm">
+
+幹の太さ<input type="text" id="TreeStemBoldTextbox" value="50" size="3"><br>
+幹の高さ<input type="text" id="TreeStemHightTextbox" value="250" size="3"><br>
+幹の一番下のx座標位置<input type="text" id="TreeStemPosXTextbox" value="250" size="3"><br>
+幹の一番下のy座標位置<input type="text" id="TreeStemPosYTextbox" value="500" size="3"><br>
+枝の分岐回数<input type="text" id="TreeBrunchDeepLengthTextbox" value="2" size="3"><br>
+分岐で発生する枝の最大個数<input type="text" id="TreeBrunchCountMaxTextbox" value="5" size="3"><br>
+分岐で発生する枝の最小個数<input type="text" id="TreeBrunchCountMinTextbox" value="3" size="3"><br>
+分岐場所の最大パーセント位置<input type="text" id="TreeBrunchBrunchingPosMaxPercentTextbox" value="100" size="3"><br>
+分岐場所の最小パーセント位置<input type="text" id="TreeBrunchBrunchingPosMinPercentTextbox" value="20" size="3"><br>
+分岐する枝の最大パーセント長<input type="text" id="TreeBrunchLengthMaxPercentTextbox" value="120" size="3"><br>
+分岐する枝の最小パーセント長<input type="text" id="TreeBrunchLengthMinPercentTextbox" value="50" size="3"><br>
+分岐する枝の太さの最大パーセント幅<input type="text" id="TreeBrunchWidthMaxPercentTextbox" value="100" size="3"><br>
+分岐する枝の太さの最小パーセント幅<input type="text" id="TreeBrunchWidthMinPercentTextbox" value="30" size="3"><br>
+上位80パーセントの枝の角度の範囲上限<input type="text" id="TreeBrunchMainAngleMaxTextbox" value="150" size="3"><br>
+上位80パーセントの枝の角度の範囲下限<input type="text" id="TreeBrunchMainAngleMinTextbox" value="30" size="3"><br>
+枝から出てくる葉の個数の最大値<input type="text" id="LeafCountMaxTextbox" value="8" size="3"><br>
+枝から出てくる葉の個数の最小値<input type="text" id="LeafCountMinTextbox" value="3" size="3"><br>
+
+</form>
+
+<button id="setDefaultBtn" onclick="setDefault()">デフォルト値に戻す</button>
+
+<hr>
 
 
 <script type="text/javascript" src="TheBonsaiJS.js">
